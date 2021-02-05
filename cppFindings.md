@@ -30,6 +30,17 @@
 * greedy algorithm: proof of the correctness
 * accmulate(v.begin(), v.end(),0) included in \<numeric>
 
+## 406. Queue Reconstruction by Height
+
+* sort(v.begin(), v.end(), function)
+* sort  2d vector, first element descending, second element ascending
+
+  ```cpp
+  sort(v.begin(), v.end(), [](vector<int> &a, vector<int> &b) {
+       return a[0] > b[0] || (a[0] == b[0] && a[1] < b[1]);
+       });
+  ```
+
 ## 432. Minimum Number of Arrows to Burst Ballons
 
 * count the non-overlapping ballon. same edge also count as overlapping like [1,2] and [2,3]
